@@ -23,17 +23,22 @@ var apiKey = "668b2e3fc37a47de87d3b5e29defacd9";
     // Download the data
     myConnector.getData = function(table, doneCallback) {
         $.ajax({
-         url: "https://www.bungie.net/platform/Destiny2/SearchDestinyPlayer/2/vicodin4000/",
-             headers: {
+            type:'GET',
+            url: "https://www.bungie.net/platform/Destiny2/SearchDestinyPlayer/2/vicodin4000/",
+            headers: {
               "X-API-Key": apiKey
-             }
+            },
+            dataType: 'json',
     }).done(function(resp){
-        var feat = resp,
+        var feat = resp.Response,
             tableData = [];
-            tableData.push({
-                "gamertag": feat
-            });
 
+            for (var i = 0, len=feat.length; i<len; i++){
+
+                tableData.push({
+                    "gamertag": feat[i].displayName
+            });
+        }
         table.appendRows(tableData);
         doneCallback();
     });
@@ -44,26 +49,8 @@ var apiKey = "668b2e3fc37a47de87d3b5e29defacd9";
     // Create event listeners for when the user submits the form
     $(document).ready(function() {
         $("#submitButton").click(function() {
-            tableau.connectionName = "Your Light grows Stronger"; // This will be the data source name in Tableau
+            tableau.connectionName = "Guardian Stats"; // This will be the data source name in Tableau
             tableau.submit(); // This sends the connector object to Tableau
         });
     });
 })();
-
-
-
-// $.ajax({
-//             url: "https://www.bungie.net/Platform/Destiny2/SearchDestinyPlayer/2/vicodin4000/",
-//             type: 'GET',
-//             dataType: 'json',
-//             headers: {
-//                 'X-API-key': '668b2e3fc37a47de87d3b5e29defacd9',
-//             },
-//             contentType: 'application/json; charset=utf-8',
-//             success: function (result) {
-//                // CallBack(result);
-//             },
-//             error: function (error) {
-//
-//             }
-//         });
