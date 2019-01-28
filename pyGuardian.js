@@ -9,7 +9,7 @@
             dataType: tableau.dataTypeEnum.string
         },{
             id:"message",
-            dataType: tablea.dataTypeEnum.string
+            dataType: tableau.dataTypeEnum.string
         }];
 
         var tableSchema = {
