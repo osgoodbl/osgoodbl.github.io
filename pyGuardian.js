@@ -44,7 +44,7 @@ var apiKey = "668b2e3fc37a47de87d3b5e29defacd9";
     // Create event listeners for when the user submits the form
     $(document).ready(function() {
         $("#submitButton").click(function() {
-            tableau.connectionName = "USGS Earthquake Feed"; // This will be the data source name in Tableau
+            tableau.connectionName = "Your Light grows Stronger"; // This will be the data source name in Tableau
             tableau.submit(); // This sends the connector object to Tableau
         });
     });
