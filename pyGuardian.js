@@ -31,7 +31,7 @@ var apiKey = "668b2e3fc37a47de87d3b5e29defacd9";
         var feat = resp,
             tableData = [];
             tableData.push({
-                "gamertag": feat.Response
+                "gamertag": feat
             });
 
         table.appendRows(tableData);
