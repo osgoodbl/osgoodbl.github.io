@@ -18,7 +18,7 @@
         schemaCallback([tableSchema]);
     };
 
-var apiKey = "668b2e3fc37a47de87d3b5e29defacd9";
+var apiKey = "9a8e500b4d154f899dfea96fc3c4889d";
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
@@ -31,7 +31,7 @@ var apiKey = "668b2e3fc37a47de87d3b5e29defacd9";
         var feat = resp,
             tableData = [];
             tableData.push({
-                "gamertag": feat.ErrorStatus
+                "gamertag": feat.Response
             });
 
         table.appendRows(tableData);
