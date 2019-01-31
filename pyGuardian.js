@@ -4,7 +4,7 @@
 
     // Define the schema
     myConnector.getSchema = function(schemaCallback) {
-        var cols = [{
+        var search_player_cols = [{
             id: "gamertag",
             alias: "username",
             description:"Your platform username/gamertag",
@@ -21,13 +21,13 @@
           dataType: tableau.dataTypeEnum.float
         }];
 
-        var tableSchema = {
+        var search_player_table = {
             id: "pyGuardian",
             alias: "Tales of your heroics",
             columns: cols
         };
 
-        schemaCallback([tableSchema]);
+        schemaCallback([search_player_table]);
     };
 
 var apiKey = "668b2e3fc37a47de87d3b5e29defacd9";
