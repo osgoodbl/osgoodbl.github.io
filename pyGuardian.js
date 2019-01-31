@@ -6,22 +6,31 @@
     myConnector.getSchema = function(schemaCallback) {
         var cols = [{
             id: "gamertag",
+            alias: "username",
+            description:"Your platform username/gamertag",
             dataType: tableau.dataTypeEnum.string
         },{
-            id:"message",
+            id:"membershipId",
+            alias:"membershipid for other api calls",
+            description:"used in other calls to the destiny 2 API",
             dataType: tableau.dataTypeEnum.string
+        },{
+          id:"membershipType",
+          alias:"game system",
+          description:"numeric representation of your gaming platform",
+          dataType: tableau.dataTypeEnum.float
         }];
 
         var tableSchema = {
             id: "pyGuardian",
-            alias: "one with the light",
+            alias: "Tales of your heroics",
             columns: cols
         };
 
         schemaCallback([tableSchema]);
     };
 
-var apiKey = "9a8e500b4d154f899dfea96fc3c4889d";
+var apiKey = "668b2e3fc37a47de87d3b5e29defacd9";
 
     // Download the data
     myConnector.getData = function(table, doneCallback) {
@@ -33,16 +42,15 @@ var apiKey = "9a8e500b4d154f899dfea96fc3c4889d";
             },
             dataType: 'json',
     }).done(function(resp){
+      console.log(resp);
         var feat = resp,
             tableData = [];
 
-            for (var i = 0, len=feat.length; i<len; i++){
-
                 tableData.push({
-                    "gamertag": feat[i].Response,
-                    "message":feat[i].Message
+                    "gamertag": feat.Response[0].displayName,
+                    "membershipId":feat.Response[0].membershipId,
+                    "membershipType":feat.Response[0].membershipType
             });
-        }
         table.appendRows(tableData);
         doneCallback();
     });
