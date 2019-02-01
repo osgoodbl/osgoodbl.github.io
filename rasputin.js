@@ -1,6 +1,5 @@
 var apiKey = "668b2e3fc37a47de87d3b5e29defacd9";
-var membershipId = player.Response[0].membershipId.val();
-var membershipType = player.Response[0].membershipType.val();
+
 $(document).ready(function() {
   $("#profilebutton").click(function() {
       $.ajax({
@@ -20,7 +19,7 @@ $(document).ready(function() {
       });
   $("#activitybutton").click(function() {
       $.ajax({
-        url: "https://www.bungie.net/platform/Destiny2/" + membershipType + "/Profile/" + destinyMembershipId + "/",
+        url: "https://www.bungie.net/platform/Destiny2/" + tableData.membershipType + "/Profile/" + tableData.displayName + "/",
         headers: {
           "X-API-Key": apiKey
         }
