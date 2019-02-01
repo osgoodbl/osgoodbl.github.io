@@ -17,7 +17,7 @@ $(document).ready(function() {
       });
   $("#activitybutton").click(function() {
       $.ajax({
-        url: "https://www.bungie.net/platform/Destiny2/" + membershipType + "/Profile/" + membershipId + "/",
+        url: "https://www.bungie.net/platform/Destiny2/" + membershipType + "/Profile/" + membershipId + "/?components=200,300",
         headers: {
           "X-API-Key": apiKey
         }
