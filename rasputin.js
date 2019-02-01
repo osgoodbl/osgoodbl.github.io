@@ -5,9 +5,8 @@ $(document).ready(function() {
         url: "https://www.bungie.net/platform/Destiny2/SearchDestinyPlayer/2/vicodin4000/",
         headers: {
           "X-API-Key": apiKey
-        },
-        dataType: "jsonp",
-    }).done(function(json){
+        }
+          }).done(function(json){
      console.log(json); //Gjallarhorn
     });
 });
