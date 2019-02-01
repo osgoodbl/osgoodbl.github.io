@@ -22,7 +22,7 @@ $(document).ready(function() {
           "X-API-Key": apiKey
         }
       }).done(function(activity){
-     console.log(activity);
+     console.log(activity, membershipType, gamertag);
       });
     });
   });
