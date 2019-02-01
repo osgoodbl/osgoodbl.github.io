@@ -7,9 +7,23 @@ $(document).ready(function() {
         headers: {
           "X-API-Key": apiKey
         }
-          }).done(function(json){
-     console.log(json);
-              var gamertag = json.Response[0].displayName
+      }).done(function(player){
+     console.log(player);
+              var membershipId = player.Response[0].membershipId.val()
+              var membershipType = player.Response[0].membershipType.val()
+        });
+      });
+});
+
+$(document).ready(function() {
+  $("#profilebutton").click(function() {
+      $.ajax({
+        url: "https://www.bungie.net/platform/Destiny2/" + membershipType + "/Profile/" + destinyMembershipId + "/",
+        headers: {
+          "X-API-Key": apiKey
+        }
+      }).done(function(activity){
+     console.log(activity);
         });
       });
 });
