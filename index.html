@@ -35,8 +35,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
-    <script src="https://connectors.tableau.com/libs/tableauwdc-2.3.latest.js" type="text/javascript"></script>
-    <script src="pyGuardian.js" type="text/javascript"></script>
+    <!-- <script src="https://connectors.tableau.com/libs/tableauwdc-2.3.latest.js" type="text/javascript"></script> -->
+    <script src="rasputin.js" type="text/javascript"></script>
   </head>
 <body>
 
@@ -55,11 +55,11 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:100%;" id="home">
-  <img class="w3-image" src="https://cdna.artstation.com/p/assets/images/images/010/259/722/large/nick-hiatt-2k-cw.jpg?1523461563" alt="Architecture" width="100%" height="50%">
+  <img class="w3-image" src="https://cdna.artstation.com/p/assets/images/images/010/259/722/large/nick-hiatt-2k-cw.jpg?1523461563" alt="the last city" width="100%" height="50%">
   <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Burnt</b></span> <span class="w3-hide-small w3-text-light-grey">Edge Transits</span></h1>
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min" style="padding:5px"><b>Burnt</b></span> <span class="w3-hide-small w3-text-light-grey">Edge Transits</span></h1>
   </div>
-</header
+</header>
 
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
@@ -73,26 +73,26 @@
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Story</div>
-        <img src="https://cdn.thetrackernetwork.com/destiny//img/destiny_content/also_triumphs/Account.png" alt="Story" style="width:50%; background:black;">
-        <button type="button" id="submitButton" class="btn btn-success" style="width:50%; background:black; border-color:black;">Fetch Guardian Profile!</button>
+        <img src="https://cdn.thetrackernetwork.com/destiny//img/destiny_content/also_triumphs/Account.png" alt="Story" style="width:50%;">
+        <button type="button" id="profilebutton" class="btn btn-success" style="width:50%; background:black; border-color:black;">Fetch Guardian Profile!</button>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Strikes</div>
-        <img src="https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/DestinyPresentationNodeDefinition_14b25c4df0032fabb090211cfad2c140.png" alt="House" style="width:50%; background:black">
+        <img src="https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/DestinyPresentationNodeDefinition_14b25c4df0032fabb090211cfad2c140.png" alt="House" style="width:50%;">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Gambit</div>
-        <img src="https://cdn.thetrackernetwork.com/destiny//img/destiny_content/also_triumphs/Gambit.png" alt="House" style="width:50%; background:black">
+        <img src="https://cdn.thetrackernetwork.com/destiny//img/destiny_content/also_triumphs/Gambit.png" alt="House" style="width:50%;">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Crucible</div>
-        <img src="https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/DestinyPresentationNodeDefinition_9a8bef48535584584db02c3d02abfbde.png" alt="House" style="width:50%; background:black">
+        <img src="https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/DestinyPresentationNodeDefinition_9a8bef48535584584db02c3d02abfbde.png" alt="House" style="width:50%;">
       </div>
     </div>
   </div>
@@ -101,13 +101,13 @@
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Raid</div>
-        <img src="https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/DestinyPresentationNodeDefinition_d08272ddb58d925a1eed0a36e21c178a.png" alt="Raid" style="width:50%; background:black">
+        <img src="https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/DestinyPresentationNodeDefinition_d08272ddb58d925a1eed0a36e21c178a.png" alt="Raid" style="width:50%; ">
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Weapon Stats</div>
-        <img src="https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/DestinyPresentationNodeDefinition_6ecdda834032a26e090260ba3d02acfa.png" alt="Weapon Stats" style="width:50%; background:black">
+        <img src="https://cdn.thetrackernetwork.com/destiny//common/destiny2_content/icons/DestinyPresentationNodeDefinition_6ecdda834032a26e090260ba3d02acfa.png" alt="Weapon Stats" style="width:50%; background-color: black;">
       </div>
     </div>
   </div>
@@ -120,7 +120,7 @@
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
-  <p>Created by <a href="https://www.osgoodb.com" title="Brian Osgood" target="_blank" class="w3-hover-text-green">A Friendly Guardian</a></p>
+  <p>Created by <a href="https://www.osgoodb.com" title="Brian Osgood" target="https://www.osgoodb.com/" class="w3-hover-text-green">A Friendly Guardian</a></p>
 </footer>
 
 </body>
