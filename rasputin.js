@@ -16,7 +16,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $("#profilebutton").click(function() {
+  $("#activitybutton").click(function() {
       $.ajax({
         url: "https://www.bungie.net/platform/Destiny2/" + membershipType + "/Profile/" + destinyMembershipId + "/",
         headers: {
