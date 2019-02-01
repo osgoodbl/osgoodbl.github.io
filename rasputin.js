@@ -8,9 +8,10 @@ $(document).ready(function() {
           "X-API-Key": apiKey
         }
       }).done(function(player){
-     console.log(player);
-              var membershipId = player.Response[0].membershipId.val()
-              var membershipType = player.Response[0].membershipType.val()
+        var membershipId = player.Response[0].membershipId.val();
+        var membershipType = player.Response[0].membershipType.val();
+     console.log(player,membershipId, membershipType);
+
         });
       });
 });
