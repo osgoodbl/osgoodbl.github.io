@@ -11,6 +11,12 @@ $(document).ready(function() {
         var membershipId = player.Response[0].membershipId.val();
         var membershipType = player.Response[0].membershipType.val();
      console.log(player,membershipId, membershipType);
+     tableData = [];
+
+         tableData.push({
+             "gamertag": feat.Response[0].displayName,
+             "membershipId":feat.Response[0].membershipId,
+             "membershipType":feat.Response[0].membershipType
 
         });
       });
@@ -22,6 +28,7 @@ $(document).ready(function() {
         }
       }).done(function(activity){
      console.log(activity);
-        });
       });
+    });
+  });
 });
