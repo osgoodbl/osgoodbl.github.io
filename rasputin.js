@@ -7,6 +7,6 @@ $(document).ready(function() {
           "X-API-Key": apiKey
         }
           }).done(function(json){
-     console.log(json); //Gjallarhorn
+     console.log(json);
     });
 });
