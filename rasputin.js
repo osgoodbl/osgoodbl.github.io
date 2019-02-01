@@ -8,7 +8,7 @@ $(document).ready(function() {
         headers: {
           "X-API-Key": apiKey
         }
-      }).done(function(player, tableData){
+      }).done(function(player){
      console.log(player);
      tableData = [];
          tableData.push({
